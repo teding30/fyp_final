@@ -1,0 +1,153 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"poppins",sans-serif;
+}
+body{
+    
+    background:linear-gradient(to right,#ffd89b ,#4367ca);
+    
+}
+.sidebar{
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    width:15%;
+    height: 650px;
+    margin: 15px;
+   
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.355);
+    box-shadow: 0 20px 32px 0 rgba(255, 255, 255, 0.37);   
+}
+.logo {
+    
+   height: 150px;
+    width: 200px;
+    margin: 0 auto;
+ 
+}
+.links a{
+    font-size: 125%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+    text-decoration: none; 
+    color: #ffffff; 
+}
+.links a:hover{
+    color: #4367ca; 
+    text-decoration:solid;    
+}
+.foreground{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.355);
+    box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+   
+    
+    width:78%;
+    height: 650px;
+    border-radius: 20px;
+    overflow-y: scroll; 
+    overflow-y: hidden;
+    position: absolute;
+    top: 20px;
+    right: 60px;    
+}
+.foreground h1{
+   text-align: center;
+   margin: 20px;
+
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    height: 50px;
+    background-color: #f4f4f479;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    
+    margin-left: 10px;
+  }
+  input[type="password"]{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+
+    margin-left: 10px;
+  }
+  input[type="time"]{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+
+    margin-left: 10px;
+  }
+  input[type="date"]{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+
+    margin-left: 10px;
+  }
+  input[type="number"]{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+
+    margin-left: 10px;
+  }
+  input[type="file"]{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+
+    margin-left: 10px;
+  }
+  /* Button */
+  button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  select {
+    margin-left: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

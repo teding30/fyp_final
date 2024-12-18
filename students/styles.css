@@ -1,0 +1,254 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"poppins",sans-serif;
+}
+body{
+    
+    background:linear-gradient(to right,#ffd89b ,#4367ca);
+    
+}
+.navbar{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    color: #ffffff;
+    
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+
+    width:55%;
+    padding:1.5rem;
+    margin:30px;
+    float: right;
+
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.355);
+    box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.navbar a {
+    text-decoration: none; 
+    color: #ffffff; 
+}
+.navbar a:hover{
+    color: #d6cba4; 
+    text-decoration:solid;
+    
+}
+.logo {
+    
+    height: 150px;
+    width: 230px;
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+th, td {
+   
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    height: 50px;
+    background-color: #f4f4f479;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    background: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.foreground{
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    
+    width:96%;
+    height: 550px;
+    margin: 30px;
+    
+    
+   
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.355);
+    box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+   
+}
+
+.foreground p{
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    left: 40px;
+
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    
+}
+.boxes {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  
+.box {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.355);
+    box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+    color: rgb(255, 255, 255);
+    
+    border: 1px solid rgba(255, 255, 255, 0.697);
+    padding:2rem;
+    text-align: center;
+    height: 250px;
+    margin:30px;
+    
+  }
+.about{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.355);
+    box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+    color: rgb(255, 255, 255);
+    
+    border: 1px solid rgba(255, 255, 255, 0.697);
+    padding:4rem;
+    text-align: center;
+    height: 700px;
+
+    margin:20px;
+    font-size: 40px;
+
+  }
+
+  .aboutdesc{
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    left: 750px;
+    font-size: 25px;
+    text-align: justify;
+  }
+  .about ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    font-size: 25px;
+    position: absolute;
+    top: 430px;
+    right: 200px;
+    left: 650px;
+
+    
+  }
+  
+  .about ul li {
+    display: inline-block;
+    margin-right: 60px; /* Adjust the margin as needed */
+  }
+  
+  .about ul li::before {
+    content: "\2022"; /* Unicode for a bullet point */
+    margin-right: 5px;
+  }
+  .img {
+    height: 60%;
+    width: 25%;
+    border-radius: 10%;
+    border: 1px solid rgba(255, 255, 255, 0.697);
+    box-shadow: 0 20px 32px 0 rgba(255, 255, 255, 0.775);
+
+    position: absolute;
+    top: 200px;
+    right: 80px;
+    left: 100px;
+
+  }
+ 
+ .instructors {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.355);
+    box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+    color: rgb(255, 255, 255);
+    
+    border: 1px solid rgba(255, 255, 255, 0.697);
+    padding:2rem;
+    text-align: center;
+    height: 400px;
+
+    margin:20px;
+    font-size: 30px;
+
+ }
+ .instruct{
+    height: 150px;
+    width: 150px;
+    border-radius: 10%;
+
+    margin-top: 0%;
+  }
+  .footer{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.355);
+    box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+    color: rgb(255, 255, 255);
+    
+    border: 1px solid rgba(255, 255, 255, 0.697);
+    padding:4rem;
+    text-align: center;
+    height: 350px;
+
+    margin:20px;
+    font-size: 20px;
+    
+
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Adjust alignment as needed */
+  }
+  
+  .social-icons li {
+    margin: 0 10px;
+  }
+  
+  .social-icons img {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px;
+    border-radius: 50%; /* For circular icons */
+  }
