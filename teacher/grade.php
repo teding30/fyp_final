@@ -78,7 +78,7 @@ $grades = $conn->query($sql);
             <th>Student Name</th>
             <th>Exam Name</th>
             <th>Score</th>
-            <
+            
         </tr>
     </thead>
     <tbody>

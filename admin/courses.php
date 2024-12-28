@@ -1,5 +1,6 @@
 <?php
 include("../include/config.php");
+include("header.php");
 
 session_start();
 if ($_SESSION['role'] !== 'admin') {
@@ -122,21 +123,6 @@ $users = $conn->query("SELECT * FROM users");
     <script src="script.js"></script>
     <title>Document</title>
     
-    <div class="sidebar">
-    <img class="logo" src="../img/logo.png" alt="">
-    
-                <div class="links">
-                <a href="admin.php" >Home</a>
-                <a href="exam.php" >Exams</a>
-                <a href="courses.php" >Courses</a>
-                <a href="grade.php" >Grades</a>
-                <a href="users.php" >Users</a>
-                <a href="#" onclick="confirmLogout()">Logout</a>
-                </div>
-
-    </div>
-
-
     <div class="foreground">
     <h1>Manage Courses</h1>
     <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>

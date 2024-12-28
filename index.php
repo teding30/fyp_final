@@ -9,8 +9,8 @@ $error = $success = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
     $username = $_POST['username'];
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-    $role = $_POST['role'];
-    //$department = $_POST['department'];
+    $role = "student";
+    $department = $_POST['department'];
 
     // Check if the username already exists
     $check_user = $conn->query("SELECT * FROM users WHERE username='$username'");
@@ -94,12 +94,7 @@ $departments = $conn->query("SELECT * FROM departments");
         <label for="username">username</label>
         <input type="password" name="password" placeholder="Password" required>
         <label for="password">password</label>
-        <select name="role" required class="">
-            <option value="" disabled selected>Select Role</option>
-            
-            <option value="teacher">Teacher</option>
-            <option value="student">Student</option>
-        </select>
+        
         <select name="department" required class="">
             <option value="" disabled selected>Select Department</option>
             <?php while ($department = $departments->fetch_assoc()) { ?>

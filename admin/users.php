@@ -1,5 +1,6 @@
 <?php
 include("../include/config.php");
+include("header.php");
 
 session_start();
 
@@ -52,21 +53,8 @@ $users = $conn->query("SELECT * FROM users");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Document</title>
+    <title>users</title>
     
-    <div class="sidebar">
-    <img class="logo" src="../img/logo.png" alt="">
-    
-                <div class="links">
-                <a href="admin.php" >Home</a>
-                <a href="exam.php" >Exams</a>
-                <a href="courses.php" >Courses</a>
-                <a href="grade.php" >Grades</a>
-                <a href="users.php" >Users</a>
-                <a href="#" onclick="confirmLogout()">Logout</a>
-                </div>
-
-    </div>
 
 
     <div class="foreground">

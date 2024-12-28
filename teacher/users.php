@@ -9,9 +9,10 @@ if ($_SESSION['role'] !== 'teacher') {
     exit;
 }
 
-
-
-// Handle User Management (CRUD)
+// Fetch teacher department
+$user_id = $_SESSION['user_id'];
+$teacher = $conn->query("SELECT department FROM users WHERE id = $user_id")->fetch_assoc();
+$teacher_department = $teacher['department'];
 
 
 // Delete a user
@@ -23,7 +24,7 @@ if (isset($_GET['delete_user'])) {
 // Fetch existing data
 $departments = $conn->query("SELECT * FROM departments ");
 $courses = $conn->query("SELECT * FROM courses");
-$users = $conn->query("SELECT * FROM users");
+$users = $conn->query("SELECT * FROM users WHERE department = '$teacher_department'");
 ?>
 
 <!DOCTYPE html>
@@ -59,9 +60,6 @@ $users = $conn->query("SELECT * FROM users");
 
     <!-- Manage Users -->
     <section>
-        
-       
-
         <!-- Existing Users -->
         <table >
             <thead>

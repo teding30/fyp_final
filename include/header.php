@@ -3,7 +3,7 @@
                 <a href="../students/exam.php" >Exams</a>
                 <a href="../students/courses.php" >Courses</a>
                 <a href="grade.php" >Grades</a>
-                <a href="team.php" >Our Team</a>
+                
                 <a href="#" onclick="confirmLogout()">Logout</a>
                     
     </div>

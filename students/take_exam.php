@@ -4,7 +4,7 @@ include("../include/config.php");
 include("../include/header.php");
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 }
 
@@ -31,38 +31,7 @@ if ($questions->num_rows === 0) {
     exit;
 }
 
-// Handle form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $score = 0;
-    $total_questions = $questions->num_rows;
-
-    // Calculate the score based on submitted answers
-    foreach ($_POST['answers'] as $question_id => $student_answer) {
-        $correct_option = $conn->query("SELECT correct_option FROM questions WHERE id = $question_id")->fetch_assoc()['correct_option'];
-        if ($student_answer === $correct_option) {
-            $score++;
-        }
-    }
-
-    // Convert score to percentage
-    $final_score = ($score / $total_questions) * 100;
-
-    // Insert the score into the grades table
-    $conn->query("INSERT INTO grades (student_id, exam_id, score) VALUES ($user_id, $exam_id, $final_score)");
-
-    // Redirect to the success page
-    header("Location: exam_success.php?score=$final_score");
-    exit;
-}
-
-// If time runs out or student doesn't submit, score defaults to 0
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['timeout'])) {
-    $conn->query("INSERT INTO grades (student_id, exam_id, score) VALUES ($user_id, $exam_id, 0)");
-    header("Location: exam_success.php?score=0");
-    exit;
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,11 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['timeout'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Take Exam</title>
-    <style>
-        .timer { font-size: 20px; color: red; }
-        form { margin-top: 20px; }
-        .question { margin-bottom: 20px; }
-    </style>
+    
     <script>
         let timeRemaining = <?= $exam_duration * 60; ?>; // Duration in seconds
 
@@ -102,7 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['timeout'])) {
     <h2>Take Exam</h2>
     <div class="timer">Time Remaining: <span id="timer"></span></div>
 
-    <form method="POST" id="examForm">
+    <form method="POST" action="exam_success.php" id="examForm">
+        <input type="hidden" name="exam_id" value="<?= $exam_id; ?>">
         <?php while ($question = $questions->fetch_assoc()) { ?>
             <div class="question">
                 <p><strong><?= $question['question_text']; ?></strong></p>
@@ -116,5 +82,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['timeout'])) {
     </form>
 </body>
 </html>
-
-
